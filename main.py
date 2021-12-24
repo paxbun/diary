@@ -192,7 +192,7 @@ def parse_file(lines: List[str]) -> List[Day]:
 
 
 if __name__ == "__main__":
-    with open(argv[1]) as input:
+    with open(argv[1], encoding="utf-8") as input:
         lines = input.readlines()
 
     total_duration = timedelta()
