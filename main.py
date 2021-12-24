@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from datetime import date, time, datetime, timedelta
 from typing import List, Optional, Tuple
 from re import compile, Pattern
-
+from sys import argv
 
 @dataclass
 class Event:
@@ -192,7 +192,7 @@ def parse_file(lines: List[str]) -> List[Day]:
 
 
 if __name__ == "__main__":
-    with open("example.md") as input:
+    with open(argv[1]) as input:
         lines = input.readlines()
 
     total_duration = timedelta()
